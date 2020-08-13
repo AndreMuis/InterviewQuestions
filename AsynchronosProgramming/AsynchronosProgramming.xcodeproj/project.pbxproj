@@ -14,6 +14,7 @@
 		1179BD2524E309AF0089FF8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1179BD2424E309AF0089FF8D /* Assets.xcassets */; };
 		1179BD2824E309AF0089FF8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1179BD2624E309AF0089FF8D /* LaunchScreen.storyboard */; };
 		1179BD3124E311290089FF8D /* SwiftImage in Frameworks */ = {isa = PBXBuildFile; productRef = 1179BD3024E311290089FF8D /* SwiftImage */; };
+		11FAF0F124E48E57006E45C0 /* GCDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FAF0F024E48E57006E45C0 /* GCDViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		1179BD2424E309AF0089FF8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1179BD2724E309AF0089FF8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1179BD2924E309AF0089FF8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11FAF0F024E48E57006E45C0 /* GCDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +62,9 @@
 			children = (
 				1179BD1B24E309AE0089FF8D /* AppDelegate.swift */,
 				1179BD1D24E309AE0089FF8D /* SceneDelegate.swift */,
-				1179BD1F24E309AE0089FF8D /* ThreadsViewController.swift */,
 				1179BD2124E309AE0089FF8D /* Main.storyboard */,
+				1179BD1F24E309AE0089FF8D /* ThreadsViewController.swift */,
+				11FAF0F024E48E57006E45C0 /* GCDViewController.swift */,
 				1179BD2424E309AF0089FF8D /* Assets.xcassets */,
 				1179BD2624E309AF0089FF8D /* LaunchScreen.storyboard */,
 				1179BD2924E309AF0089FF8D /* Info.plist */,
@@ -148,6 +151,7 @@
 				1179BD2024E309AE0089FF8D /* ThreadsViewController.swift in Sources */,
 				1179BD1C24E309AE0089FF8D /* AppDelegate.swift in Sources */,
 				1179BD1E24E309AE0089FF8D /* SceneDelegate.swift in Sources */,
+				11FAF0F124E48E57006E45C0 /* GCDViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
