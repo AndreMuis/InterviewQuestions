@@ -18,7 +18,7 @@ class ThreadsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.originalImageView.image = UIImage(named: "LargeImage")
+        self.originalImageView.image = UIImage(named: "landscape")
         self.transformedImageView.backgroundColor = UIColor(white: 0.85, alpha: 1.0)
         
         NotificationCenter.default.addObserver(self, selector: #selector(threadWIllExit), name: .NSThreadWillExit, object: nil)
@@ -28,7 +28,7 @@ class ThreadsViewController: UIViewController {
         print("Transforming image . . .")
         
         self.thread = Thread(block: {
-            let originalImage = Image<RGBA<UInt8>>(named: "LargeImage")!
+            let originalImage = Image<RGBA<UInt8>>(named: "landscape")!
             let grayscaleImage: Image<UInt8> = originalImage.map { $0.gray }
             self.transformedImage = grayscaleImage.uiImage
         })

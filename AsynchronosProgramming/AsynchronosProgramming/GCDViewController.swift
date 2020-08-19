@@ -20,7 +20,7 @@ class GCDViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
            
-        self.originalImageView.image = UIImage(named: "LargeImage")
+        self.originalImageView.image = UIImage(named: "landscape")
         
         self.transformedImageView.backgroundColor = UIColor(white: 0.85, alpha: 1.0)
 
@@ -34,7 +34,7 @@ class GCDViewController: UIViewController {
         self.resetScreen()
         
         DispatchQueue.global(qos: .userInitiated).async {
-            let uiImage = self.convertToGrayscale(imageName: "LargeImage")
+            let uiImage = self.convertToGrayscale(imageName: "landscape")
             
             DispatchQueue.main.async {
                 self.transformedImageView.image = uiImage
@@ -49,7 +49,7 @@ class GCDViewController: UIViewController {
         let queue = DispatchQueue(label: "CustomQueue")
         
         queue.async {
-            let uiImage = self.convertToGrayscale(imageName: "LargeImage")
+            let uiImage = self.convertToGrayscale(imageName: "landscape")
                       
             DispatchQueue.main.async {
                 self.transformedImageView.image = uiImage
@@ -70,16 +70,16 @@ class GCDViewController: UIViewController {
         var uiImage1: UIImage?, uiImage2: UIImage?, uiImage3: UIImage?
         
         queue1.async(group: group) {
-            uiImage1 = self.convertToGrayscale(imageName: "LargeImage")
+            uiImage1 = self.convertToGrayscale(imageName: "landscape")
         }
         
         queue2.async(group: group) {
-            let originalImage = Image<RGBA<UInt8>>(named: "LargeImage")!
+            let originalImage = Image<RGBA<UInt8>>(named: "landscape")!
             uiImage2 = originalImage.map{ $0.gray >= 128 }.uiImage
         }
         
         queue3.async(group: group) {
-            let originalImage = Image<RGBA<UInt8>>(named: "LargeImage")!
+            let originalImage = Image<RGBA<UInt8>>(named: "landscape")!
             uiImage3 = originalImage.yReversed().uiImage
         }
         
@@ -93,7 +93,7 @@ class GCDViewController: UIViewController {
     }
     
     func convertToGrayscale(imageName: String) -> UIImage {
-        let originalImage = Image<RGBA<UInt8>>(named: "LargeImage")!
+        let originalImage = Image<RGBA<UInt8>>(named: "landscape")!
         let grayscaleImage: Image<UInt8> = originalImage.map { $0.gray }
 
         return grayscaleImage.uiImage
